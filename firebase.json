@@ -1,8 +1,8 @@
 {
     "functions": {
       "predeploy": [
-        "npm run lint functions",
-        "npm run build functions --prod"
+        "npm run lint vaki-functions",
+        "npm run build vaki-functions --prod"
       ],
       "source": "/"
     }

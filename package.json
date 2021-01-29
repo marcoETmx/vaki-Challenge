@@ -26,9 +26,9 @@
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "firebase:serve": "concurrently --kill-others \"npm run build functions --watch\" \"firebase serve --only functions\"",
-    "firebase:shell": "concurrently --kill-others \"npm run build functions --watch\" \"firebase functions:shell\" --raw",
-    "firebase:deploy": "firebase deploy"
+    "firebase:serve": "concurrently --kill-others \"npm run build vaki-functions --watch\" \"firebase serve --only functions\"",
+    "firebase:shell": "concurrently --kill-others \"npm run build vaki-functions --watch\" \"firebase functions:shell\" --raw",
+    "firebase:deploy": "nx run vaki-functions:firebase --cmd deploy"
   },
   "private": true,
   "dependencies": {
@@ -63,7 +63,7 @@
     "@nrwl/jest": "11.2.0",
     "@nrwl/node": "11.2.0",
     "@nrwl/tao": "11.2.0",
-    "@nrwl/workspace": "11.2.0",
+    "@nrwl/workspace": "^11.2.0",
     "@types/jest": "26.0.8",
     "@types/node": "12.12.38",
     "@typescript-eslint/eslint-plugin": "4.3.0",
@@ -83,6 +83,6 @@
   },
   "main": "dist/apps/vaki-functions/main.js",
   "engines": {
-    "node": "14"
+    "node": "10"
   }
 }

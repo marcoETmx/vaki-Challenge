@@ -43,8 +43,13 @@
             "polyfills": "apps/vaki/src/polyfills.ts",
             "tsConfig": "apps/vaki/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/vaki/src/favicon.ico", "apps/vaki/src/assets"],
-            "styles": ["apps/vaki/src/styles.scss"],
+            "assets": [
+              "apps/vaki/src/favicon.ico",
+              "apps/vaki/src/assets"
+            ],
+            "styles": [
+              "apps/vaki/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -105,10 +110,18 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/vaki"],
+          "outputs": [
+            "coverage/apps/vaki"
+          ],
           "options": {
             "jestConfig": "apps/vaki/jest.config.js",
             "passWithNoTests": true
+          }
+        },
+        "firebase": {
+          "builder": "@nxtend/firebase:firebase",
+          "options": {
+            "cmd": "--help"
           }
         }
       }
@@ -134,7 +147,74 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/vaki-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/vaki-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
+    "vaki-functions": {
+      "root": "apps/vaki-functions",
+      "sourceRoot": "apps/vaki-functions/src",
+      "projectType": "application",
+      "prefix": "vaki-functions",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/apps/vaki-functions",
+            "main": "apps/vaki-functions/src/main.ts",
+            "tsConfig": "apps/vaki-functions/tsconfig.app.json",
+            "assets": [
+              "apps/vaki-functions/src/assets"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/vaki-functions/src/environments/environment.ts",
+                  "with": "apps/vaki-functions/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "vaki-functions:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/vaki-functions/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/vaki-functions"
+          ],
+          "options": {
+            "jestConfig": "apps/vaki-functions/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "firebase": {
+          "builder": "@nxtend/firebase:firebase",
+          "options": {
+            "cmd": "--help"
           }
         }
       }

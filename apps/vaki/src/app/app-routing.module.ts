@@ -5,7 +5,10 @@ import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
   {
-    path: '', component: LayoutComponent
+    path: '', component: LayoutComponent, children: [
+      { path: '', redirectTo: '/vaki', pathMatch: 'full' },
+      { path: 'vaki', loadChildren: () => import('./module/vaki/vaki.module').then(m => m.VakiModule)}
+    ]
   },
   { path: '**', component: PageNotFoundComponent }
 ];

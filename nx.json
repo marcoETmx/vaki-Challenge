@@ -18,6 +18,6 @@
   "projects": {
     "vaki": { "tags": [] },
     "vaki-e2e": { "tags": [], "implicitDependencies": ["vaki"] },
-    "vaki-functions": { "tags": [] }
+    "functions": { "tags": [] }
   }
 }

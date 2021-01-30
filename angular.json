@@ -210,12 +210,6 @@
             "jestConfig": "apps/vaki-functions/jest.config.js",
             "passWithNoTests": true
           }
-        },
-        "firebase": {
-          "builder": "@nxtend/firebase:firebase",
-          "options": {
-            "cmd": "--help"
-          }
         }
       }
     }

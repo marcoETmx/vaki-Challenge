@@ -4,6 +4,14 @@
 
 export const environment = {
   production: false,
+  firebase: {
+    apiKey: "***REMOVED***",
+    authDomain: "vaki-challenge-1.firebaseapp.com",
+    projectId: "vaki-challenge-1",
+    storageBucket: "vaki-challenge-1.appspot.com",
+    messagingSenderId: "***REMOVED***",
+    appId: "1:***REMOVED***:web:fe137f271847c06280b2b2"
+  }
 };
 
 /*

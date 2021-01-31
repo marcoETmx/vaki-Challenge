@@ -1,0 +1,15 @@
+.reward__title{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.reward__title__text{
+    font-weight: bold;
+}
+
+.reward__title__image{
+    max-height: 90px;
+    max-width: 100%;
+    object-fit: contain;
+    width: auto;
+}

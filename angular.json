@@ -43,10 +43,7 @@
             "polyfills": "apps/vaki/src/polyfills.ts",
             "tsConfig": "apps/vaki/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "apps/vaki/src/favicon.ico",
-              "apps/vaki/src/assets"
-            ],
+            "assets": ["apps/vaki/src/favicon.ico", "apps/vaki/src/assets"],
             "styles": [
               "apps/vaki/src/styles.scss",
               "apps/vaki/src/_vakers-vaki-web-theme.scss"
@@ -111,9 +108,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/vaki"
-          ],
+          "outputs": ["coverage/apps/vaki"],
           "options": {
             "jestConfig": "apps/vaki/jest.config.js",
             "passWithNoTests": true
@@ -152,9 +147,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/vaki-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/vaki-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -167,16 +160,12 @@
       "architect": {
         "build": {
           "builder": "@nrwl/node:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/functions",
             "main": "apps/functions/src/main.ts",
             "tsConfig": "apps/functions/tsconfig.app.json",
-            "assets": [
-              "apps/functions/src/assets"
-            ]
+            "assets": ["apps/functions/src/assets"]
           },
           "configurations": {
             "production": {
@@ -201,18 +190,35 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/functions/**/*.ts"
-            ]
+            "lintFilePatterns": ["apps/functions/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/functions"
-          ],
+          "outputs": ["coverage/apps/functions"],
           "options": {
             "jestConfig": "apps/functions/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "models": {
+      "root": "libs/models",
+      "sourceRoot": "libs/models/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/models/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/models"],
+          "options": {
+            "jestConfig": "libs/models/jest.config.js",
             "passWithNoTests": true
           }
         }

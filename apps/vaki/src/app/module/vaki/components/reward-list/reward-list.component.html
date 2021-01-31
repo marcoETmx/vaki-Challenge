@@ -1,8 +1,6 @@
 <h2>Recompensas:</h2>
-<div class="reward-grid">
-    <vaki-challenge-reward></vaki-challenge-reward>
-    <vaki-challenge-reward></vaki-challenge-reward>
-    <vaki-challenge-reward></vaki-challenge-reward>
-    <vaki-challenge-reward></vaki-challenge-reward>
-    <vaki-challenge-reward></vaki-challenge-reward>
+<div class="reward-grid" *ngIf="vakiRewards$ | async as vakiRewards">
+    <ng-container *ngFor="let vakiReward of vakiRewards">
+        <vaki-challenge-reward [vakiReward]="vakiReward"></vaki-challenge-reward>
+    </ng-container>
 </div>

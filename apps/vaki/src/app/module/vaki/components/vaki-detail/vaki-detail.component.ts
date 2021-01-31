@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Vaki } from '@vaki-challenge/models';
 
 @Component({
   selector: 'vaki-challenge-vaki-detail',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vaki-detail.component.scss']
 })
 export class VakiDetailComponent implements OnInit {
+
+  @Input() vaki: Vaki;
 
   constructor() { }
 

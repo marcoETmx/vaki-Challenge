@@ -7,3 +7,19 @@
     }
 }
 
+.vaki__detail__contribute{
+    padding-top: 30px;
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 20% 35% 35%;
+}
+
+.vaki__detail__reward{
+    padding-top: 30px;
+}
+
+.vaki__categories{
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: auto 40px;
+}

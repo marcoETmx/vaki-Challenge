@@ -6,13 +6,14 @@ import { RewardListComponent } from './components/reward-list/reward-list.compon
 import { VakiComponent } from './components/vaki/vaki.component';
 import { VakiRoutingModule } from './components/vaki-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { MaterialModule } from '../../material/material.module';
 
 
 
 @NgModule({
   declarations: [RewardComponent, VakiDetailComponent, RewardListComponent, VakiComponent],
   imports: [
-    CommonModule, VakiRoutingModule, SharedModule
+    CommonModule, VakiRoutingModule, SharedModule, MaterialModule
   ]
 })
 export class VakiModule { }

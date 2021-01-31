@@ -1,1 +1,41 @@
-<p>vaki-detail works!</p>
+<div class="vaki-detail">
+    <div>
+        <img class="vaki__image" src="https://firebasestorage.googleapis.com/v0/b/vaki-challenge-1.appspot.com/o/vakis%2Fimg_podcast_margarita.png?alt=media&token=08df13ad-3661-4ad3-b9fc-17e3f3ee0bbe">
+    </div>
+    <mat-card>
+        <mat-card-title>
+            Crowdfunding para el Podcast Margarita La Soberana
+        </mat-card-title>
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Moneda</mat-label>
+                <select matNativeControl required>
+                  <option value="MXN">MXN</option>
+                  <option value="USD">USD</option>
+                </select>
+              </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>¿Cuánto quieres aportar?</mat-label>
+                <span matPrefix>$ &nbsp;</span>
+                <input matInput type="number" placeholder="0" value="Sushi">
+              </mat-form-field>
+            <button mat-flat-button color="primary">Aportar</button>
+        </div>
+        <div>
+            <button mat-stroked-button color="primary">Ver recompensas</button>
+        </div>
+        <div>
+            <mat-chip-list >
+                <mat-chip color="accent">Impacto</mat-chip>
+                <mat-chip>Project</mat-chip>
+                <mat-chip>Podcast</mat-chip>
+                <mat-chip>Periodismo</mat-chip>
+              </mat-chip-list>
+              <div >
+                <button mat-mini-fab disabled aria-label="Share Vaki">
+                  <mat-icon>share</mat-icon>
+                </button>
+              </div>
+        </div>
+    </mat-card>
+</div>

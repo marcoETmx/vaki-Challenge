@@ -44,7 +44,7 @@
             "tsConfig": "apps/vaki/tsconfig.app.json",
             "aot": true,
             "assets": ["apps/vaki/src/favicon.ico", "apps/vaki/src/assets"],
-            "styles": ["apps/vaki/src/styles.scss"],
+            "styles": ["apps/vaki/src/styles.scss", "apps/vaki/src/_vakers-vaki-web-theme.scss"],
             "scripts": []
           },
           "configurations": {

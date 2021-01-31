@@ -12,4 +12,8 @@ export class VakiComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scroll(el: HTMLElement) {
+    console.log("siiiiii")
+    el.scrollIntoView({behavior: 'smooth'});
+}
 }

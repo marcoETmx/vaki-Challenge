@@ -1,0 +1,9 @@
+.vaki-detail{
+    display: grid;
+    grid-template-columns: auto 440px;
+    padding-top: 30px;
+    .vaki__image{
+        max-height: 520px;
+    }
+}
+

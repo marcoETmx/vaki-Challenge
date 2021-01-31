@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "vaki-challenge-1"
+  },
+  "targets": {
+    "vaki-challenge-1": {
+      "hosting": {
+        "vaki": [
+          "vaki-challenge-1"
+        ]
+      }
+    }
   }
 }

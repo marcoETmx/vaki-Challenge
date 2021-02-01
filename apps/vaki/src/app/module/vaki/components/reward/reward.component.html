@@ -1,16 +1,13 @@
-<mat-card>
+<mat-card class="reward">
   <div class="reward__title">
-    <h3 class="reward__title__text">Este es el título de la recompensa</h3>
+    <h3 class="reward__title__text">{{vakiReward?.title}}</h3>
     <img class="reward__title__image"
-      src="https://firebasestorage.googleapis.com/v0/b/vaki-challenge-1.appspot.com/o/vakis%2Freward.png?alt=media&token=23491e40-b938-4557-b713-dd44a2c708c3"
+      [src]="vakiReward?.img"
     />
   </div>
   <p>
-    En Bahía Solano hay muchos perros y gatos, algunos son queridos, otros no
-    tanto, pero tenemos en nuestras manos la capacidad de mejorar la realidad de
-    esos animales y de la comunidad del departamento. La capacidad de mejorar la
-    realidad animal
+    {{vakiReward?.description}}
   </p>
 
-  <button class="full-width" mat-stroked-button color="primary">COP $150.000</button>
+  <button class="full-width" mat-stroked-button color="primary">COP {{vakiReward.value | currency }}</button>
 </mat-card>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { VakiReward } from '@vaki-challenge/models';
 
 @Component({
   selector: 'vaki-challenge-reward',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reward.component.scss']
 })
 export class RewardComponent implements OnInit {
+
+  @Input() vakiReward: VakiReward;
 
   constructor() { }
 

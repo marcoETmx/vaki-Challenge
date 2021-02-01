@@ -44,7 +44,10 @@
             "tsConfig": "apps/vaki/tsconfig.app.json",
             "aot": true,
             "assets": ["apps/vaki/src/favicon.ico", "apps/vaki/src/assets"],
-            "styles": ["apps/vaki/src/styles.scss", "apps/vaki/src/_vakers-vaki-web-theme.scss"],
+            "styles": [
+              "apps/vaki/src/styles.scss",
+              "apps/vaki/src/_vakers-vaki-web-theme.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -116,6 +119,10 @@
           "options": {
             "cmd": "--help"
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     },
@@ -191,6 +198,27 @@
           "outputs": ["coverage/apps/functions"],
           "options": {
             "jestConfig": "apps/functions/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "models": {
+      "root": "libs/models",
+      "sourceRoot": "libs/models/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/models/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/models"],
+          "options": {
+            "jestConfig": "libs/models/jest.config.js",
             "passWithNoTests": true
           }
         }

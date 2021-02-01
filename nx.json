@@ -18,6 +18,7 @@
   "projects": {
     "vaki": { "tags": [] },
     "vaki-e2e": { "tags": [], "implicitDependencies": ["vaki"] },
-    "functions": { "tags": [] }
+    "functions": { "tags": [] },
+    "models": { "tags": [] }
   }
 }

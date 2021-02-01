@@ -4,9 +4,14 @@
     </div>
     <mat-card>
         <mat-card-title>
-            Crowdfunding para el Podcast Margarita La Soberana
+            {{vaki.name}}
         </mat-card-title>
-        <div>
+        <div class="vaki__description">
+          <p class="vaki__text">
+            {{vaki.summary}}
+          </p>
+        </div>
+        <div class="vaki__detail__contribute">
             <mat-form-field appearance="outline">
                 <mat-label>Moneda</mat-label>
                 <select matNativeControl required>
@@ -19,17 +24,17 @@
                 <span matPrefix>$ &nbsp;</span>
                 <input matInput type="number" placeholder="0" value="Sushi">
               </mat-form-field>
+              
             <button mat-flat-button color="primary">Aportar</button>
         </div>
-        <div>
-            <button mat-stroked-button color="primary">Ver recompensas</button>
+        <div class="vaki__detail__reward">
+            <button class="full-width " mat-stroked-button color="primary">Ver recompensas</button>
         </div>
-        <div>
+        <div class="vaki__categories">
             <mat-chip-list >
-                <mat-chip color="accent">Impacto</mat-chip>
-                <mat-chip>Project</mat-chip>
-                <mat-chip>Podcast</mat-chip>
-                <mat-chip>Periodismo</mat-chip>
+              <ng-container *ngFor="let categorie of vaki.categories">
+                <mat-chip>{{categorie}}</mat-chip>
+              </ng-container>
               </mat-chip-list>
               <div >
                 <button mat-mini-fab disabled aria-label="Share Vaki">

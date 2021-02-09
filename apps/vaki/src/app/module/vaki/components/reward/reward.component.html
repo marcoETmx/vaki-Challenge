@@ -9,5 +9,5 @@
     {{vakiReward?.description}}
   </p>
 
-  <button class="full-width" mat-stroked-button color="primary">COP {{vakiReward.value | currency }}</button>
+  <button class="full-width" mat-stroked-button color="primary" (click)="addToCart(vakiReward)">COP {{vakiReward.value | currency }}</button>
 </mat-card>
